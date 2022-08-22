@@ -1,38 +1,173 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  min-height: 100vh;
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  font-family: sans-serif;
+}
+.container-fluid{
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 93vh;
+}
+.firstHalf,.secondHalf{
+  position: relative;
+  height: 100%;
+  padding: 30px;
+}
+.firstHalf{
+  background: #fff;
+  width: 70%;
+}
+.secondHalf{
+   width: 30%;
+   background: #d9d9d9;
+   display: block;
+   justify-content: center;
+   align-items: center;
+}
+.cloud{
+  margin-bottom: 20px;
+  color: #292648;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+.imgBx{
+  position: relative;
+  max-width: 38%;
+  height: 130px;
+  margin: 20px 0;
+}
+img{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn{
+  position: absolute;
+  top: 0;
+  border: none;
+  outline: none;
+  margin: 10px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #263E2C;
+  color: #fff;
+  right: 5%;
+}
+.firstImg{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.about{
+  margin: 20px 15px;
+  font-weight: 200;
+}
+.about .firsthalf .one{
+  font-size: 1.8em;
+}
+.about .firsthalf .manage{
+  margin: 5px 0 30px 0;
+}
+.about .secondhalf p b{
+  font-weight: 800;
+}
+.secondHalf .industry{
+  font-size: 15px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.paying{
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.paying p:nth-child(1){
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+.paying .money{
+  font-size: 19px;
+}
+.paying .bottom{
+  margin-top: 15px;
+  font-size: 14px;
+  color: #c2c2c2;
+}
+.button .try{
+  position: absolute;
+  bottom: 17%;
+  background: #7372FF;
+  height: 40px;
+  width: 100%;
+  clip-path: polygon(42% 70%, 20% 100%, 67% 100%);
+}
+.button button{
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+  background: #7372FF;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 15px 45px;
+  border-radius: 25px;
+}
+@media (max-width:991px) {
+  .container{
+    display: block;
+    width: 100%;
+    height: 200%;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .firstHalf,.secondHalf{
+    position: absolute;
+    width: 100%;
+  }
+  .secondHalf{
+    top: 100%;
+  }
+  .button .try{
+    bottom: 15.5%;
+    height: 40px;
+    width: 100%;
+    clip-path: polygon(35% 43%, 22% 100%, 48% 100%);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width:670px) {
+  .button .try{
+    clip-path: polygon(39% 43%, 22% 100%, 52% 100%);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width:502px) {
+  .button .try{
+    clip-path: polygon(39% 43%, 22% 100%, 58% 100%);
+  }
+}
+@media (max-width:370px) {
+  .button .try{
+    clip-path: polygon(44% 43%, 22% 100%, 67% 100%);
+  }
+}
+@media (max-width:807px) {
+  .button .try{
+    clip-path: polygon(33% 43%, 22% 100%, 45% 100%);
   }
 }
